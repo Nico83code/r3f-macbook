@@ -1,4 +1,3 @@
-import { Perf } from "r3f-perf";
 import {
   Center,
   Html,
@@ -7,20 +6,18 @@ import {
   useGLTF,
   Environment,
   Float,
-} from "@react-three/drei";
+} from '@react-three/drei';
 
 export default function Experience() {
   const computer = useGLTF(
-    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
+    'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf'
   );
 
   return (
     <>
-      <Perf position="top-left" />
+      <Environment preset='city' />
 
-      <Environment preset="city" />
-
-      <color args={["#827b7b"]} attach="background" />
+      <color args={['#827b7b']} attach='background' />
       <Center>
         <PresentationControls
           global
@@ -35,7 +32,7 @@ export default function Experience() {
               width={2.5}
               height={1.65}
               intensity={55}
-              color={"#f0d1ba"}
+              color={'#f0d1ba'}
               rotation={[-0.1, Math.PI, 0]}
               position={[0, 0.55, -1.15]}
             />
@@ -43,12 +40,12 @@ export default function Experience() {
             <primitive object={computer.scene} position-y={-0.5} scale={0.9}>
               <Html
                 transform
-                wrapperClass="htmlScreen"
+                wrapperClass='htmlScreen'
                 distanceFactor={1.17}
                 position={[0, 1.56, -1.4]}
                 rotation-x={-0.256}
               >
-                <iframe src="https://www.touchtribe.nl" />
+                <iframe src='https://www.touchtribe.nl' />
               </Html>
             </primitive>
           </Float>
